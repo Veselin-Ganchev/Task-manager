@@ -42,19 +42,19 @@ Simple Task Manager web application made with NextJS/ReactJS, TypeScript, Local 
 ## How to Build and Start the Project
 
 1. Clone Github repository:
-   git clone https://github.com/Veselin-Ganchev/Task-manager.git
+   => git clone https://github.com/Veselin-Ganchev/Task-manager.git
 
 2. Navigate to the project root folder
-   cd task-app
+   => cd task-app
 
 3. Install all necessary packages:
-   npm install
-   or
-   yarn install
+   => npm install
 
 4. Run the project:
-   npm run dev
-   or
-   yarn run dev
+   => npm run build
+   => npm start
+
+   Or Run the project in development state
+   => npm run dev
 
 5. Open your web browser and navigate to the port that application is provided(example: http://localhost:3000) to view and interact with the application.
