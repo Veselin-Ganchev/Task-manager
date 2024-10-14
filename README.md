@@ -54,7 +54,7 @@ Simple Task Manager web application made with NextJS/ReactJS, TypeScript, Local 
    => npm run build
    => npm start
 
-   Or Run the project in development state
+   Or Run the project in development mode
    => npm run dev
 
 5. Open your web browser and navigate to the port that application is provided(example: http://localhost:3000) to view and interact with the application.
