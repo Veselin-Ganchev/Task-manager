@@ -1,42 +1,105 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #4a90e2;
+  --primary-color-hover: #1f4a6a;
+  --secondary-color: #f5a623;
+  --button-background: #0070f3;
+  --button-text-color: white;
+  --input-background: #f0f0f0;
+  --input-border-color: #ddd;
+  --input-text-color: #333;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background-color: #1f1f1f;
+  --text-color: #eaeaea;
+  --primary-color: #3276aa;
+  --primary-color-hover: #1f4a6a;
+  --secondary-color: #f39c12;
+  --button-background: #59a5b6;
+  --button-text-color: #ffffff;
+  --input-background: #2d2d2d;
+  --input-border-color: #555;
+  --input-text-color: #ffffff;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+h1,
+h2 {
+  text-align: center;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--input-background);
+  color: var(--input-text-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+legend {
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+
+button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+button:active {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .taskListContainer,
+  .formContainer,
+  .editTaskContainer {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  button {
+    padding: 10px;
   }
 }
